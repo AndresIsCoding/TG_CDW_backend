@@ -131,6 +131,7 @@ class UploadView(APIView):
               continue
           updated_data: dict[str,str|int|float|bool|datetime|date|time|PatientData|None] = {}
           for key_cell in data_row:
+            if key_cell == "excel_row_number": continue
             error_key = key_cell 
             #! Here the data is converted according with their type
             data_type_cell: DataTypeCell = column_name_type_to_model[key_file]["type"][key_cell]
@@ -224,6 +225,7 @@ class UploadView(APIView):
               continue
           if updated_data["trauma_register_record_id"]: 
             try:
+              print(f"LOG: Saving row {data_row.get('excel_row_number')} from sheet \"{error_table}\"")
               model(**updated_data).save()
             except DataError as e:
               users_not_found_information.append(f"CREATION ERROR: In table: <{error_table}> with trauma_register_id: <{error_id}>): {e}")

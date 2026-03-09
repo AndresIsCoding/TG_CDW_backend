@@ -48,6 +48,7 @@ class GestorExcelFileData():
       result_data_file : dict[str,list[dict[str,str]]] = {}
       for _, (key, value) in enumerate(self.sheets_columns_configuration.items()):
         updated_key = key.split(":")[0]
+        print(f"LOG: Reading sheet: \"{updated_key}\"")
         sheet: Worksheet = workbook[updated_key]
         result_data_sheet : list[dict[str,str]] = self.gestor_sheet.get_data_from_sheet(
           column_ubication=value, 

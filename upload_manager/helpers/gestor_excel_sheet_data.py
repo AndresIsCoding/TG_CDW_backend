@@ -81,11 +81,13 @@ class GestorExcelSheetData():
     )
     result: list[dict[str,str]] = []
     for i in range(2, max_row):
-      result.append(self.get_row_elements(
+      row_data = self.get_row_elements(
         column_ubication=column_ubication, 
         sheet=sheet, 
         row_number=i,
-      ))
+      )
+      row_data["excel_row_number"] = i
+      result.append(row_data)
     end_time = time.time() #? Calculate time
     elapsed_time = end_time - start_time  #? Calculate time
     print(f"LOG: Execution time (sheet called \"{sheet.title}\"): {elapsed_time:.4f} seconds") #? Calculate time
