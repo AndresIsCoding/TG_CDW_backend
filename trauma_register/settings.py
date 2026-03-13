@@ -37,7 +37,7 @@ SECRET_KEY = "django-insecure-@r5-3kkn1p$b_ok0hwt#!-8i0b)700ri6h!m@f8c*mk^y%1-mx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['132.30.100.70', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['172.30.100.70', 'RedcapPC.huv.gov.co', 'localhost', '127.0.0.1']
 
 
 # Application definition
