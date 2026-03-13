@@ -61,7 +61,7 @@ INSTALLED_APPS = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",  # Cambia esto por la URL de tu frontend en producción
     "http://127.0.0.1:8000", 
-    "http://132.30.100.70:8000",
+    "http://172.30.100.70:8000",
     "http://RedcapPC.huv.gov.co:5000",
     "http://RedcapPC.huv.gov.co:8000",
     #"http://trauma-app.com",
