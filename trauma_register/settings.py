@@ -37,7 +37,7 @@ SECRET_KEY = "django-insecure-@r5-3kkn1p$b_ok0hwt#!-8i0b)700ri6h!m@f8c*mk^y%1-mx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['172.30.100.70', 'RedcapPC.huv.gov.co', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['172.30.100.70', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -62,6 +62,7 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",  # Cambia esto por la URL de tu frontend en producción
     "http://127.0.0.1:8000", 
     "http://172.30.100.70:8000",
+    "http://172.30.100.70:5000",
     "http://RedcapPC.huv.gov.co:5000",
     "http://RedcapPC.huv.gov.co:8000",
     #"http://trauma-app.com",
